@@ -149,24 +149,49 @@ ul {
     margin-right: 0px;
 }
 
-.header-contacts .contacts {
+ .contacts {
+     display: flex;
     color: var(--grey-color);
     text-decoration: none;
-
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em
 }
 
-.header-contacts .contacts:hover,
-.header-contacts .contacts:focus {
+ .contacts:hover,
+ .contacts:focus {
     color: var(--blue-color);
 }
 
+.contacts-mail{
+width: 16px;
+height: 12px;
+margin-right: 10px;
+fill: currentColor;
+
+}
+.contacts-smartphone{
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+    }
+
+
 .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-section-hero/hero-img.jpg);
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: cover;
+    background-position: center;
+
     background-color: var(--blackhero-color);
     padding: 200px 0;
+    
 
 }
 
@@ -229,6 +254,21 @@ ul {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
+.benefits-icons{
+background-color: var(--button-color);
+height: 120px;
+width: 270px;
+border-radius: 4px;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.benefits-icon{
+    width: 70px;
+height: 70px;
+}
 
 .occupation-section{
     padding-top: 0;
@@ -275,11 +315,12 @@ ul {
 
 .team-item {
     display: flex;
-
 }
 
 .team-content {
     margin-right: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
 }
 .team-content:last-child {
     margin-right: 0px;
@@ -302,7 +343,7 @@ ul {
     text-align: center;
     font-size: 16px;
     line-height: 1.19;
-    
+    margin-bottom: 16px;
     letter-spacing: 0.03em;
 }
 .text-team{
@@ -311,12 +352,90 @@ ul {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+ .icons-list{
+    display: flex;
+    justify-content: center;
+}
+
+.social-list:not(:last-child) {
+    margin-right: 10px;
+}
+.social-links{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.social-links:hover .social-icons,
+.social-links:focus .social-icons {
+    fill: #ffffff;
+}
+.social-links:hover,
+.social-links:focus{
+    background-color:var(--blue-color)
+}
+.social-icons{
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8    ;
+}
+.clients-title{
+    color: var(--main-color);
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.clients-list{
+    display: flex;
+}
+.clients-item{
+    display: flex;
+    width: 170px;
+    height: 92px;
+    margin-right: 30px;
+    border: solid 1px #AFB1B8;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.clients-item:last-child{
+    margin-right: 0px;
+}
+.clients-item:hover,
+.clients-item:focus{
+    border-color: var(--blue-color);
+}
+.clients-item:hover .clients-icons,
+.clients-item:focus .clients-icons{
+    fill: var(--blue-color);
+}
+
+.clients-icons{
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+}
+
+
 
 .footer {
     background-color: var(--blackhero-color);
     padding-top: 60px;
     padding-bottom: 60px;
 
+}
+
+.footer-container{
+    display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
 }
 
 .logo-footer {
@@ -376,6 +495,41 @@ address {
     color: var(--blue-color);
 
 }
+.connect-icons{
+    margin-left: 70px;
+}
+.connect{
+    color: var(--white-color);
+    font-style: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+margin-bottom: 20px;
+}
+.footer-list{
+    display: flex;
+    margin-right: 10px;
+}
+.footer-list:last-child{
+    margin-right: 0px;
+}
+.footer-link{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+.footer-link:hover{
+background-color: var(--blue-color);
+}
+.footer-icons{
+    fill:var(--white-color);
+    height: 20px;
+    width: 20px;
+}
+
 
 /*main portfolio*/
 .add-navi {
@@ -404,12 +558,15 @@ address {
     text-align: center;
     letter-spacing: 0.03em;
     cursor: pointer;
+        border-radius: 4px;
 }
 
 .button:hover,
 .button:focus {
     color: var(--white-color);
     background-color: var(--blue-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
 }
 
 .all {
@@ -425,7 +582,10 @@ address {
 .net-item {
     margin-right: 30px;
     margin-bottom: 30px;
-
+}
+.net-item:hover,
+.net-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .net-item:nth-child(3n) {
