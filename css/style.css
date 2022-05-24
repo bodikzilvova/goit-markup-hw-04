@@ -259,7 +259,7 @@ background-color: var(--button-color);
 height: 120px;
 width: 270px;
 border-radius: 4px;
-margin-bottom: 10px;
+margin-bottom: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -396,30 +396,32 @@ height: 70px;
     display: flex;
 }
 .clients-item{
-    display: flex;
-    width: 170px;
-    height: 92px;
+
+    width: 100%;
+    height: 100%;
     margin-right: 30px;
-    border: solid 1px #AFB1B8;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+   
 }
 .clients-item:last-child{
     margin-right: 0px;
 }
-.clients-item:hover,
-.clients-item:focus{
+.clients-link:hover,
+.clients-link:focus{
     border-color: var(--blue-color);
 }
-.clients-item:hover .clients-icons,
-.clients-item:focus .clients-icons{
+.clients-link:hover .clients-icons,
+.clients-link:focus .clients-icons{
     fill: var(--blue-color);
+}
+.clients-link{
+display: flex;
+border: solid 1px #AFB1B8;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 }
 
 .clients-icons{
-    width: 106px;
-    height: 60px;
     fill: #AFB1B8;
 }
 
@@ -491,7 +493,7 @@ address {
 }
 
 .footer-contact:hover,
-.footer-contact:focus {
+.footer-contact:focus{
     color: var(--blue-color);
 
 }
@@ -500,7 +502,7 @@ address {
 }
 .connect{
     color: var(--white-color);
-    font-style: 14px;
+    font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 margin-bottom: 20px;
@@ -521,7 +523,8 @@ margin-bottom: 20px;
     justify-content: center;
     align-items: center;
 }
-.footer-link:hover{
+.footer-link:hover,
+.fotter-link:focus{
 background-color: var(--blue-color);
 }
 .footer-icons{
@@ -558,7 +561,7 @@ background-color: var(--blue-color);
     text-align: center;
     letter-spacing: 0.03em;
     cursor: pointer;
-        border-radius: 4px;
+    padding: 6px 22px;
 }
 
 .button:hover,
@@ -583,10 +586,7 @@ background-color: var(--blue-color);
     margin-right: 30px;
     margin-bottom: 30px;
 }
-.net-item:hover,
-.net-item:focus{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 
 .net-item:nth-child(3n) {
     margin-right: 0;
@@ -596,17 +596,17 @@ background-color: var(--blue-color);
     margin-bottom: 0px;
 }
 .text-flex{
-    padding: 0px 24px 20px 24px;
+    padding: 20px 24px 20px 24px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+    
     
 
 }
 .portfolio-titles {
     color: var(--main-color);
     margin-bottom: 4px;
-
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -614,8 +614,16 @@ background-color: var(--blue-color);
 }
 
 .portfolio-text {
-   
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+}
+.portfolio-link{
+    text-decoration: none;
+    color: var(--grey-color);
+    display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
